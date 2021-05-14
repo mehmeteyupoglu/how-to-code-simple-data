@@ -71,8 +71,6 @@
 (define (fn-for-tank t)
   (... (tank-x t) (tank-dir t)))
 
-
-
 (define-struct invader (x y dx))
 ;; Invader is (make-invader Number Number Number)
 ;; interp. the invader is at (x, y) in screen coordinates
@@ -83,11 +81,10 @@
 (define I3 (make-invader 150 (+ HEIGHT 10) 10)) ;> landed, moving right
 (define I4 (make-invader WIDTH (+ HEIGHT 10) -10)) ;> landed, moving right
 
-
 #;
 (define (fn-for-invader invader)
-  (... (invader-x invader) (invader-y invader) (invader-dx invader)))
-
+  (...
+   (invader-x invader)(invader-y invader)(invader-dx invader)))
 
 (define-struct missile (x y))
 ;; Missile is (make-missile Number Number)
